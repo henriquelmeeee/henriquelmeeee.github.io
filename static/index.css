@@ -1,1 +1,92 @@
 
+.containers .container1 {
+
+    display: inline-block;
+}
+
+.containers .container2{
+
+    display: inline-block;
+
+}
+
+.image {
+
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 25px;
+
+}
+
+.text { 
+
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+.containers {
+
+    margin-left: 360px;
+
+}
+.containers .container1{
+
+    width: 300px;
+    border: 1px solid rgb(248, 245, 245);
+    border-radius: 5%;
+    padding: 15px;
+    margin: 20px;
+    margin-top: 1px;
+    text-decoration: none;
+    text-decoration-color: none;
+    text-decoration-line: none;
+}
+
+.containers .container2 {
+
+    width: 330px;
+    border: 1px solid rgb(248, 245, 245);
+    border-radius: 5%;
+    padding: 15px;
+    margin: 20px;
+    margin-top: 1px;
+    text-decoration: none;
+    text-decoration-color: none;
+    text-decoration-line: none;
+
+}
+
+.containers .container3 {
+
+    width: 675                            px;
+    border: 1px solid rgb(248, 245, 245);
+    border-radius: 5%;
+    padding: 15px;
+    margin: 20px;
+    margin-top: 1px;
+    text-decoration: none;
+    text-decoration-color: none;
+    text-decoration-line: none;
+}
+
+div a {
+
+    text-decoration: none;
+    color: inherit;
+}
+
+div a:hover {
+
+    text-decoration: none;
+    color: inherit;
+}
+
+div a:visit {
+
+    text-decoration: none;
+    color: inherit;
+}
