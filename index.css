@@ -1,6 +1,12 @@
-.containers div {
+.containers .container1 {
 
     display: inline-block;
+}
+
+.containers .container2{
+
+    display: inline-block;
+
 }
 
 .image {
@@ -23,7 +29,7 @@
 
 .containers {
 
-    margin-left: 340px;
+    margin-left: 360px;
 
 }
 .containers .container1{
@@ -51,6 +57,19 @@
     text-decoration-color: none;
     text-decoration-line: none;
 
+}
+
+.containers .container3 {
+
+    width: 675px;
+    border: 1px solid rgb(248, 245, 245);
+    border-radius: 5%;
+    padding: 15px;
+    margin: 20px;
+    margin-top: 1px;
+    text-decoration: none;
+    text-decoration-color: none;
+    text-decoration-line: none;
 }
 
 div a {
