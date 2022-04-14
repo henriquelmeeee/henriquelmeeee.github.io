@@ -1,0 +1,23 @@
+header {
+
+    height: 50px;
+
+}
+
+.lista-anos {
+
+
+    text-align: center;
+
+
+}
+
+.lista-anos ul {
+
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    zoom:1;
+    *display: inline;
+
+}
