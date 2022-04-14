@@ -4,26 +4,90 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="./index.css">
     <title>Blog | Henrique</title>
 </head>
-<style>
-
-* {
-
-width: 700px; 
-margin-left: auto;
-margin-right: auto; 
-
-}
-
-</style>
 <body>
-    <h1>Postagens do Blog</h1>
-    <h3 class="post-section">
-        
-        
-        <a href="2022/index.html">2022</a>
-    
-    </h3>
+    <div class="postagens">
+        <h5>2022</h5>
+        <hr style="margin-right: 80%;">
+        <article>
+
+            <h5><a href="/blog/posts/atualizacoes-blog-abril/index.html">Atualizações no Blog - Abril</a></h5>
+            <p id="2post">Publicado em 13 de abril de 2022 às 22:45 • <time class="timeago" datetime="2022-04-13T22:45:00Z"></time></p>
+
+        </article>
+        <article>
+            <h5><a href="/blog/posts/primeira-postagem/index.html">Minha primeira postagem</a></h5>
+            <p>Publicado em 20 de março de 2022 às 21:33 • <time class="timeago" datetime="2022-03-20T21:33:00Z"></time></p>
+        </article>
+
+    </div>
+<script>
+(function timeAgo(selector) {
+
+var templates = {
+    prefix: "",
+    suffix: "",
+    seconds: "menos de um minuto",
+    minute: "um minuto atrás",
+    minutes: "%d minutos atrás",
+    hour: "uma hora atrás",
+    hours: "%d horas atrás",
+    day: "um dia atrás",
+    days: "%d dias atrás",
+    month: "um mês atrás",
+    months: "%d meses atrás",
+    year: "um ano atrás",
+    years: "%d anos atrás"
+};
+var template = function(t, n) {
+    return templates[t] && templates[t].replace(/%d/i, Math.abs(Math.round(n)));
+};
+
+var timer = function(time) {
+    if (!time)
+        return;
+    time = time.replace(/\.\d+/, ""); // remove milliseconds
+    time = time.replace(/-/, "/").replace(/-/, "/");
+    time = time.replace(/T/, " ").replace(/Z/, " UTC-3");
+    time = time.replace(/([\+\-]\d\d)\:?(\d\d)/, " $1$2"); // -04:00 -> -0400
+    time = new Date(time * 1000 || time);
+
+    var now = new Date();
+    var seconds = ((now.getTime() - time) * .001) >> 0;
+    var minutes = seconds / 60;
+    var hours = minutes / 60;
+    var days = hours / 24;
+    var years = days / 365;
+
+    return templates.prefix + (
+            seconds < 45 && template('seconds', seconds) ||
+            seconds < 90 && template('minute', 1) ||
+            minutes < 45 && template('minutes', minutes) ||
+            minutes < 90 && template('hour', 1) ||
+            hours < 24 && template('hours', hours) ||
+            hours < 42 && template('day', 1) ||
+            days < 30 && template('days', days) ||
+            days < 45 && template('month', 1) ||
+            days < 365 && template('months', days / 30) ||
+            years < 1.5 && template('year', 1) ||
+            template('years', years)
+            ) + templates.suffix;
+};
+
+var elements = document.getElementsByClassName('timeago');
+for (var i in elements) {
+    var $this = elements[i];
+    if (typeof $this === 'object') {
+        $this.innerHTML = timer($this.getAttribute('title') || $this.getAttribute('datetime'));
+    }
+}
+// update time every minute
+setTimeout(timeAgo, 60000);
+
+})();
+</script>
 </body>
 </html>
