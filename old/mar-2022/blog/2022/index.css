@@ -1,0 +1,24 @@
+.center{
+
+    display: flex;
+
+}
+
+.center .menu{
+
+    margin-left: 1100px;
+
+}
+
+/* link que ainda não foi acessado */
+.center a {
+    text-decoration: none;
+    color: inherit;
+ }
+
+.center a:hover {
+
+    text-decoration: none;
+    color: inherit;
+
+}
