@@ -1,0 +1,29 @@
+<form>
+    <label for="type">Window Type:</label>
+    <select id="type">
+        <option value="osx">osx</option>
+        <option value="ubuntu" selected>ubuntu</option>
+        <option value="windows">windows</option>
+        <option value="custom">custom</option>
+    </select>
+    <label for="dark">dark</label>
+    <input type="checkbox" id="dark" checked/>
+</form>
+<!-- shell.js terminal window -->
+<div class="shell ubuntu dark shadow">
+    <div class="status-bar">
+        <div class="buttons">
+            <a href="javascript:;" class="close" title="Close">
+                <i class="fa fa-times"></i>
+            </a>
+            <a href="javascript:;" class="minimize" title="Minimize">
+                <i class="fa fa-minus"></i>
+            </a>
+            <a href="javascript:;" class="enlarge" title="Enlarge">
+                <i class="fa fa-plus"></i>
+            </a>
+        </div>
+        <div class="title">user@host: ~</div>
+    </div>
+    <div class="content"></div>
+</div>
